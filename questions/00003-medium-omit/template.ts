@@ -1,0 +1,7 @@
+type MyOmit<T, K> = {
+   [P in keyof T as P extends K ? never : P]: T[P]
+}
+
+type MyExlude<T, K> = {
+   [P in keyof T as P extends K? never : P]: T[P]
+}
